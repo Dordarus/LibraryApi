@@ -7,7 +7,7 @@ class Book < ApplicationRecord
             genre.downcase!
         end
     #-----validate------
-        validates :title, presence: true, length: {maximum: 30},
+        validates :title, presence: true, length: {maximum: 60},
                           uniqueness: { case_sensitive: false }
         validates :genre, presence: true, length: {maximum: 30}
         validates :year, presence: true,

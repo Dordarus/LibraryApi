@@ -17,25 +17,25 @@ class BooksController < ApplicationController
   def create
       @book = Book.create!(book_params)
       @book.save
-      json_response(@book)  
+      json_response(@book, :created)  
   end
 
   # PATCH /books/:id
   def update
       @book.update(book_params)
-      json_response(@author)
+      head :no_content
   end 
 
   # DELETE /books/:id
   def destroy
       @book.destroy
-      json_response(@book)
+      head :no_content
   end
 
   private
 
   def book_params
-      params.require(:book).permit(:title, :genre, :year, :plot, :author_id)
+      params.permit(:title, :genre, :year, :plot, :author_id)
   end
 
   def find_book

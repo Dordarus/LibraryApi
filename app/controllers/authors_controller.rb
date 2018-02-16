@@ -13,18 +13,24 @@ class AuthorsController < ApplicationController
 	  json_response({author: @author, books: @author.books.all})
   end    
 
-	# PUT /author/:id
+	# PATCH /author/:id
   def update      
 	  @author.update(author_params)
-	  json_response(@author)
+	  head :no_content
   end
 
 	# POST /autors
   def create
 	  @author = Author.create!(author_params)
 	  @author.save
-	  json_response(@author)
+	  json_response(@author, :created)
   end   
+
+	# DELETE /books/:id
+  def destroy
+		@author.destroy
+		head :no_content
+	end
 
 	private 
 	
