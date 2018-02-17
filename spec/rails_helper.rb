@@ -46,6 +46,9 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
+  config.include RequestSpecHelper
+  config.include ControllerSpecHelper
+
   # add `FactoryGirl` methods
   config.include FactoryBot::Syntax::Methods
   
