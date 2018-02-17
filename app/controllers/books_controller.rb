@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :find_book, only: [:show, :edit, :update, :destroy]
-  #before_action :signed_in_user, only: [:new, :create, :edit, :update, :destroy]
+  skip_before_action :authorize_request, only: [:index, :show] 
   
   # GET /books
   def index

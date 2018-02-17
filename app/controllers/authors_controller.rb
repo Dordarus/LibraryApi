@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
-  before_action :find_author, only: [:show, :update, :destroy]
-  #before_action :signed_in_user, only: [:new, :create, :edit, :update, :destroy]
-
+	before_action :find_author, only: [:show, :update, :destroy]
+	skip_before_action :authorize_request, only: [:index, :show] 
+  
 	# GET /authors
   def index
 	  @authors = Author.all
