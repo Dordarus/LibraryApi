@@ -1,0 +1,1614 @@
+  <h4><a href='#authentication'>Authentication</a></h4>
+  <ul>
+      <li><a href='#authentication-authenticate'>authenticate</a></li>
+  </ul>
+  <h4><a href='#authors'>Authors</a></h4>
+  <ul>
+      <li><a href='#authors-index'>index</a></li>
+      <li><a href='#authors-show'>show</a></li>
+      <li><a href='#authors-update'>update</a></li>
+      <li><a href='#authors-create'>create</a></li>
+      <li><a href='#authors-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#books'>Books</a></h4>
+  <ul>
+      <li><a href='#books-index'>index</a></li>
+      <li><a href='#books-show'>show</a></li>
+      <li><a href='#books-create'>create</a></li>
+      <li><a href='#books-update'>update</a></li>
+      <li><a href='#books-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#users'>Users</a></h4>
+  <ul>
+      <li><a href='#users-create'>create</a></li>
+  </ul>
+
+
+
+  <hr/>
+
+  <div>
+    <h2 id="authentication">
+      <a href='#authentication'>Authentication</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="authentication-authenticate">
+      <a href='#authentication'>Authentication</a> / <a href='#authentication-authenticate'>authenticate</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST auth/login
+            <br>
+            <small>Login user and return auth token once user is authenticated</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>User information</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>email </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Email nessessary for signup</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Password nessessary for signup</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="authors">
+      <a href='#authors'>Authors</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="authors-index">
+      <a href='#authors'>Authors</a> / <a href='#authors-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /v1/authors
+            <br>
+            <small>Show all authors</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>author </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>first_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>First name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>last_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Last name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>bio </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short biography of author</p>
+
+    </li>
+    
+    <li>
+      <strong>books </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be an Array of nested elements</p>
+ ]
+      </small>
+      
+<p>List of author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>Author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="authors-show">
+      <a href='#authors'>Authors</a> / <a href='#authors-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /v1/authors/:id
+            <br>
+            <small>Show specific author with books</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>author </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>first_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>First name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>last_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Last name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>bio </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short biography of author</p>
+
+    </li>
+    
+    <li>
+      <strong>books </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be an Array of nested elements</p>
+ ]
+      </small>
+      
+<p>List of author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>Author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="authors-update">
+      <a href='#authors'>Authors</a> / <a href='#authors-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /v1/authors/:id
+            <br>
+            <small>Update specific author</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>author </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>first_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>First name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>last_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Last name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>bio </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short biography of author</p>
+
+    </li>
+    
+    <li>
+      <strong>books </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be an Array of nested elements</p>
+ ]
+      </small>
+      
+<p>List of author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>Author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="authors-create">
+      <a href='#authors'>Authors</a> / <a href='#authors-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /v1/authors
+            <br>
+            <small>Create a author</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>author </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>first_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>First name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>last_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Last name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>bio </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short biography of author</p>
+
+    </li>
+    
+    <li>
+      <strong>books </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be an Array of nested elements</p>
+ ]
+      </small>
+      
+<p>List of author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>Author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="authors-destroy">
+      <a href='#authors'>Authors</a> / <a href='#authors-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /v1/authors/:id
+            <br>
+            <small>Delete specific author</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>author </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>first_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>First name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>last_name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Last name of author</p>
+
+    </li>
+    
+    <li>
+      <strong>bio </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short biography of author</p>
+
+    </li>
+    
+    <li>
+      <strong>books </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be an Array of nested elements</p>
+ ]
+      </small>
+      
+<p>List of author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>Author&#39;s book</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+</ul>
+
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="books">
+      <a href='#books'>Books</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="books-index">
+      <a href='#books'>Books</a> / <a href='#books-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /v1/books
+            <br>
+            <small>Show all books</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+    <li>
+      <strong>author_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Id of author</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="books-show">
+      <a href='#books'>Books</a> / <a href='#books-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /v1/books/:id
+            <br>
+            <small>Show specific book</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+    <li>
+      <strong>author_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Id of author</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="books-create">
+      <a href='#books'>Books</a> / <a href='#books-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /v1/books
+            <br>
+            <small>Create a book</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+    <li>
+      <strong>author_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Id of author</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="books-update">
+      <a href='#books'>Books</a> / <a href='#books-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /v1/books/:id
+            <br>
+            <small>Update specific book</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+    <li>
+      <strong>author_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Id of author</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="books-destroy">
+      <a href='#books'>Books</a> / <a href='#books-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /v1/books/:id
+            <br>
+            <small>Delete specific book</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>book </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>title </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Title of book</p>
+
+    </li>
+    
+    <li>
+      <strong>genre </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Genre of book</p>
+
+    </li>
+    
+    <li>
+      <strong>year </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Year of publication of the book</p>
+
+    </li>
+    
+    <li>
+      <strong>plot </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Short plot descripition</p>
+
+    </li>
+    
+    <li>
+      <strong>author_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Id of author</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="users">
+      <a href='#users'>Users</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="users-create">
+      <a href='#users'>Users</a> / <a href='#users-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /signup
+            <br>
+            <small>Create a user and return authenticated token upon signup</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+<p>User information</p>
+
+    </li>
+    <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Full name of user</p>
+
+    </li>
+    
+    <li>
+      <strong>email </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Email nessessary for signup</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Password nessessary for signup</p>
+
+    </li>
+    
+    <li>
+      <strong>password_confirmation </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Password confirmnation</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+  </div>

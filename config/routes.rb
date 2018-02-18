@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   post 'auth/login' => 'authentication#authenticate'
   post 'signup' => 'users#create'
 
-
-  scope module: :v1, constraints: ApiVersion.new('v1', true) do
+  namespace 'v1' do
     #authors routes
     get '/authors'=>'authors#index', as: :authors_index
     post '/authors'=>'authors#create'
