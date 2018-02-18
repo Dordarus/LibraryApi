@@ -1,6 +1,7 @@
 Rails.application.routes.draw do 
-  post 'auth/login', to: 'authentication#authenticate'
-  post 'signup', to: 'users#create'
+  root 'apipie/apipies#index'
+  post 'auth/login' => 'authentication#authenticate'
+  post 'signup' => 'users#create'
 
   #authors routes
   get '/authors'=>'authors#index', as: :authors_index
