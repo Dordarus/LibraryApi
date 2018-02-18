@@ -1,6 +1,10 @@
 Rails.application.routes.draw do 
-  scope module: :v1, constraints: ApiVersion.new('v1', true) do
+  root "apipie/apipies#index"
+  post 'auth/login' => 'authentication#authenticate'
+  post 'signup' => 'users#create'
 
+
+  scope module: :v1, constraints: ApiVersion.new('v1', true) do
     #authors routes
     get '/authors'=>'authors#index', as: :authors_index
     post '/authors'=>'authors#create'
@@ -14,6 +18,4 @@ Rails.application.routes.draw do
     patch '/books/:id' => 'books#update'
     delete '/books/:id' => 'books#destroy'
   end
-  post 'auth/login', to: 'authentication#authenticate'
-  post 'signup', to: 'users#create'
 end
