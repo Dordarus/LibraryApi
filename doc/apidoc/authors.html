@@ -64,6 +64,10 @@
 
     <div id='description-index' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/authors</pre>
+
 
 
 
@@ -343,6 +347,10 @@
 
     <div id='description-show' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/authors/1</pre>
+
 
 
 
@@ -622,6 +630,13 @@
 
     <div id='description-update' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl -X PATCH \ 
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;author[key]=[value]&#39; \
+http://localhost:3000/v1/authors/1</pre>
+
 
 
 
@@ -637,6 +652,30 @@
     </thead>
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>author </strong><br>
       <small>
@@ -901,6 +940,15 @@
 
     <div id='description-create' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl -X POST \ 
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;author[first_name]=[value]&#39; \
+-d &#39;author[last_name]=[value]&#39; \
+-d &#39;author[bio]=[value]&#39; \
+http://localhost:3000/v1/authors</pre>
+
 
 
 
@@ -916,6 +964,30 @@
     </thead>
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>author </strong><br>
       <small>
@@ -1180,6 +1252,12 @@
 
     <div id='description-destroy' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl -X DELETE \ 
+-H &#39;Authorization: [auth_token]&#39; \
+http://localhost:3000/v1/authors/1</pre>
+
 
 
 
@@ -1195,6 +1273,30 @@
     </thead>
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>author </strong><br>
       <small>
@@ -1446,7 +1548,7 @@
       </div>
     </div>
     <hr>
-    <footer></footer>
+    <footer>&copy; 2018 Daniel Vysotskyi</footer>
   </div>
   <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

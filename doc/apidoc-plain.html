@@ -53,24 +53,22 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl \
+-d email=[email] \
+-d password=[password] \
+http://localhost:3000/auth/login</pre>
+
+          <h4>Examples</h4>
+            <pre class="wiki">{
+  &quot;auth_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTkxMzA3MzF9.d3iMiRwoqE1P33VSYV6iuNpORQ58pxJyDD0H2DvLNOc&quot;
+}
+</pre>
 
 
           <h4>Params</h4>
           <ul>
-    <li>
-      <strong>user </strong>:
-      <small>
-        optional
-        
-          [ 
-<p>Must be a Hash</p>
- ]
-      </small>
-      
-<p>User information</p>
-
-    </li>
-    <ul>
     <li>
       <strong>email </strong>:
       <small>
@@ -99,8 +97,6 @@
 
     </li>
     
-</ul>
-
 </ul>
 
       </div>
@@ -134,6 +130,10 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/authors</pre>
+
 
 
           <h4>Params</h4>
@@ -301,6 +301,10 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/authors/1</pre>
+
 
 
           <h4>Params</h4>
@@ -468,10 +472,31 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X PATCH \ 
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;author[key]=[value]&#39; \
+http://localhost:3000/v1/authors/1</pre>
+
 
 
           <h4>Params</h4>
           <ul>
+    <li>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+    </li>
+    
     <li>
       <strong>author </strong>:
       <small>
@@ -635,10 +660,33 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X POST \ 
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;author[first_name]=[value]&#39; \
+-d &#39;author[last_name]=[value]&#39; \
+-d &#39;author[bio]=[value]&#39; \
+http://localhost:3000/v1/authors</pre>
+
 
 
           <h4>Params</h4>
           <ul>
+    <li>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+    </li>
+    
     <li>
       <strong>author </strong>:
       <small>
@@ -802,10 +850,30 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X DELETE \ 
+-H &#39;Authorization: [auth_token]&#39; \
+http://localhost:3000/v1/authors/1</pre>
+
 
 
           <h4>Params</h4>
           <ul>
+    <li>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+    </li>
+    
     <li>
       <strong>author </strong>:
       <small>
@@ -983,6 +1051,10 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/books</pre>
+
 
 
           <h4>Params</h4>
@@ -1090,6 +1162,10 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/books/1</pre>
+
 
 
           <h4>Params</h4>
@@ -1197,10 +1273,34 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X POST \
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;book[title]=[value]&#39; \
+-d &#39;book[genre]=[value]&#39; \
+-d &#39;book[year]=[value]&#39; \
+-d &#39;book[author_id]=[value]&#39; \
+http://localhost:3000/v1/books</pre>
+
 
 
           <h4>Params</h4>
           <ul>
+    <li>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+    </li>
+    
     <li>
       <strong>book </strong>:
       <small>
@@ -1304,10 +1404,31 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X PATCH \ 
+-H &quot;Authorization: [auth_token]&quot; \
+-d &quot;book[key]=[value]&quot; \
+http://localhost:3000/v1/books/1</pre>
+
 
 
           <h4>Params</h4>
           <ul>
+    <li>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+    </li>
+    
     <li>
       <strong>book </strong>:
       <small>
@@ -1411,10 +1532,30 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X DELETE \ 
+-H &quot;Authorization: [auth_token]&quot; \
+http://localhost:3000/v1/books/1</pre>
+
 
 
           <h4>Params</h4>
           <ul>
+    <li>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+    </li>
+    
     <li>
       <strong>book </strong>:
       <small>
@@ -1532,6 +1673,21 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X POST \
+-d name=[name]
+-d email=[email] \
+-d password=[password] \
+-d password=[password_confirmation] \
+http://localhost:3000/signup</pre>
+
+          <h4>Examples</h4>
+            <pre class="wiki">{
+  &quot;auth_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1MTkxMzEzNTN9.mHa431RKg7hLPKoX7z2V8ZsyBflheBoLdpbsrIIYUeg&quot;, 
+  &quot;message&quot;: &quot;Account created successfully&quot;
+}
+</pre>
 
 
           <h4>Params</h4>

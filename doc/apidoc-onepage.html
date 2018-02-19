@@ -45,7 +45,7 @@
 
 
 <div>
-<p>Usefull Library Api</p>
+<p>Superusefull Library Api</p>
 </div>
 
 <hr>
@@ -91,6 +91,18 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl \
+-d email=[email] \
+-d password=[password] \
+http://localhost:3000/auth/login</pre>
+
+          <h2>Examples</h2>
+            <pre>{
+  &quot;auth_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTkxMzA3MzF9.d3iMiRwoqE1P33VSYV6iuNpORQ58pxJyDD0H2DvLNOc&quot;
+}
+</pre>
 
 
           <h2>Params</h2>
@@ -104,30 +116,7 @@
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>user </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>User information</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be a Hash</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>user[email] </strong><br>
+      <strong>email </strong><br>
       <small>
         required
         
@@ -149,9 +138,9 @@
   </tr>
 
   
-  <tr style='background-color:rgb(250,250,250);'>
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>user[password] </strong><br>
+      <strong>password </strong><br>
       <small>
         required
         
@@ -173,7 +162,6 @@
   </tr>
 
   
-
 
             </tbody>
           </table>
@@ -220,6 +208,10 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/authors</pre>
+
 
 
           <h2>Params</h2>
@@ -498,6 +490,10 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/authors/1</pre>
+
 
 
           <h2>Params</h2>
@@ -776,6 +772,13 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X PATCH \ 
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;author[key]=[value]&#39; \
+http://localhost:3000/v1/authors/1</pre>
+
 
 
           <h2>Params</h2>
@@ -788,6 +791,30 @@
             </thead>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>author </strong><br>
       <small>
@@ -1054,6 +1081,15 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X POST \ 
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;author[first_name]=[value]&#39; \
+-d &#39;author[last_name]=[value]&#39; \
+-d &#39;author[bio]=[value]&#39; \
+http://localhost:3000/v1/authors</pre>
+
 
 
           <h2>Params</h2>
@@ -1066,6 +1102,30 @@
             </thead>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>author </strong><br>
       <small>
@@ -1332,6 +1392,12 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X DELETE \ 
+-H &#39;Authorization: [auth_token]&#39; \
+http://localhost:3000/v1/authors/1</pre>
+
 
 
           <h2>Params</h2>
@@ -1344,6 +1410,30 @@
             </thead>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>author </strong><br>
       <small>
@@ -1627,6 +1717,10 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/books</pre>
+
 
 
           <h2>Params</h2>
@@ -1809,6 +1903,10 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/books/1</pre>
+
 
 
           <h2>Params</h2>
@@ -1991,6 +2089,16 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X POST \
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;book[title]=[value]&#39; \
+-d &#39;book[genre]=[value]&#39; \
+-d &#39;book[year]=[value]&#39; \
+-d &#39;book[author_id]=[value]&#39; \
+http://localhost:3000/v1/books</pre>
+
 
 
           <h2>Params</h2>
@@ -2003,6 +2111,30 @@
             </thead>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>book </strong><br>
       <small>
@@ -2173,6 +2305,13 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X PATCH \ 
+-H &quot;Authorization: [auth_token]&quot; \
+-d &quot;book[key]=[value]&quot; \
+http://localhost:3000/v1/books/1</pre>
+
 
 
           <h2>Params</h2>
@@ -2185,6 +2324,30 @@
             </thead>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>book </strong><br>
       <small>
@@ -2355,6 +2518,12 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X DELETE \ 
+-H &quot;Authorization: [auth_token]&quot; \
+http://localhost:3000/v1/books/1</pre>
+
 
 
           <h2>Params</h2>
@@ -2367,6 +2536,30 @@
             </thead>
             <tbody>
                 <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>book </strong><br>
       <small>
@@ -2554,6 +2747,21 @@
 
       <div>
         
+<p>###Example cURL</p>
+
+<pre>curl -X POST \
+-d name=[name]
+-d email=[email] \
+-d password=[password] \
+-d password=[password_confirmation] \
+http://localhost:3000/signup</pre>
+
+          <h2>Examples</h2>
+            <pre>{
+  &quot;auth_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1MTkxMzEzNTN9.mHa431RKg7hLPKoX7z2V8ZsyBflheBoLdpbsrIIYUeg&quot;, 
+  &quot;message&quot;: &quot;Account created successfully&quot;
+}
+</pre>
 
 
           <h2>Params</h2>
@@ -2691,12 +2899,13 @@
       </div>
   </div>
 
+  
 
         
       </div>
     </div>
     <hr>
-    <footer></footer>
+    <footer>&copy; 2018 Daniel Vysotskyi</footer>
   </div>
   <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

@@ -64,10 +64,25 @@
 
     <div id='description-create' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl -X POST \
+-d name=[name]
+-d email=[email] \
+-d password=[password] \
+-d password=[password_confirmation] \
+http://localhost:3000/signup</pre>
 
 
 
 
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">{
+  &quot;auth_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1MTkxMzEzNTN9.mHa431RKg7hLPKoX7z2V8ZsyBflheBoLdpbsrIIYUeg&quot;, 
+  &quot;message&quot;: &quot;Account created successfully&quot;
+}
+</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -212,7 +227,7 @@
       </div>
     </div>
     <hr>
-    <footer></footer>
+    <footer>&copy; 2018 Daniel Vysotskyi</footer>
   </div>
   <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

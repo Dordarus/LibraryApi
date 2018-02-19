@@ -64,10 +64,22 @@
 
     <div id='description-authenticate' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl \
+-d email=[email] \
+-d password=[password] \
+http://localhost:3000/auth/login</pre>
 
 
 
 
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">{
+  &quot;auth_token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MTkxMzA3MzF9.d3iMiRwoqE1P33VSYV6iuNpORQ58pxJyDD0H2DvLNOc&quot;
+}
+</pre>
 
   <h3>Params</h3>
   <table class='table'>
@@ -80,30 +92,7 @@
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>user </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>User information</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be a Hash</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>user[email] </strong><br>
+      <strong>email </strong><br>
       <small>
         required
         
@@ -125,9 +114,9 @@
   </tr>
 
   
-  <tr style='background-color:rgb(250,250,250);'>
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
-      <strong>user[password] </strong><br>
+      <strong>password </strong><br>
       <small>
         required
         
@@ -150,7 +139,6 @@
 
   
 
-
     </tbody>
   </table>
 
@@ -164,7 +152,7 @@
       </div>
     </div>
     <hr>
-    <footer></footer>
+    <footer>&copy; 2018 Daniel Vysotskyi</footer>
   </div>
   <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>

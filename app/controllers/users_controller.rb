@@ -9,6 +9,21 @@ class UsersController < ApplicationController
       param :password, String, desc: 'Password nessessary for signup', :required => true
       param :password_confirmation, String, desc: 'Password confirmnation', :required => true
     end
+    description <<-EOS 
+    ###Example cURL
+     curl -X POST \\
+     -d name=[name]
+     -d email=[email] \\
+     -d password=[password] \\
+     -d password=[password_confirmation] \\
+     http://localhost:3000/signup
+  EOS
+  example <<-EOS
+    {
+      "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1MTkxMzEzNTN9.mHa431RKg7hLPKoX7z2V8ZsyBflheBoLdpbsrIIYUeg", 
+      "message": "Account created successfully"
+    }
+  EOS
     def create
       user = User.create!(user_params)
       auth_token = AuthenticateUser.new(user.email, user.password).call

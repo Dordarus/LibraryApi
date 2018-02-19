@@ -66,6 +66,10 @@
 
     <div id='description-index' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/books</pre>
+
 
   <h3>Supported Formats</h3>
   json
@@ -251,6 +255,10 @@
 
     <div id='description-show' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl http://localhost:3000/v1/books/1</pre>
+
 
   <h3>Supported Formats</h3>
   json
@@ -436,6 +444,16 @@
 
     <div id='description-create' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl -X POST \
+-H &#39;Authorization: [auth_token]&#39; \
+-d &#39;book[title]=[value]&#39; \
+-d &#39;book[genre]=[value]&#39; \
+-d &#39;book[year]=[value]&#39; \
+-d &#39;book[author_id]=[value]&#39; \
+http://localhost:3000/v1/books</pre>
+
 
   <h3>Supported Formats</h3>
   json
@@ -453,6 +471,30 @@
     </thead>
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>book </strong><br>
       <small>
@@ -621,6 +663,13 @@
 
     <div id='description-update' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl -X PATCH \ 
+-H &quot;Authorization: [auth_token]&quot; \
+-d &quot;book[key]=[value]&quot; \
+http://localhost:3000/v1/books/1</pre>
+
 
   <h3>Supported Formats</h3>
   json
@@ -638,6 +687,30 @@
     </thead>
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>book </strong><br>
       <small>
@@ -806,6 +879,12 @@
 
     <div id='description-destroy' class='collapse accordion-body'>
       
+<p>###Example cURL</p>
+
+<pre>curl -X DELETE \ 
+-H &quot;Authorization: [auth_token]&quot; \
+http://localhost:3000/v1/books/1</pre>
+
 
   <h3>Supported Formats</h3>
   json
@@ -823,6 +902,30 @@
     </thead>
     <tbody>
         <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>Authorization: Basic &lt;base64 encoded values&gt; </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Login requires standard HTTP Basic Authentication header</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
     <td>
       <strong>book </strong><br>
       <small>
@@ -978,7 +1081,7 @@
       </div>
     </div>
     <hr>
-    <footer></footer>
+    <footer>&copy; 2018 Daniel Vysotskyi</footer>
   </div>
   <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
